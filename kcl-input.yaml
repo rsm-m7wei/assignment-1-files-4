@@ -1,0 +1,39 @@
+name: Kendall Crab & Lobster
+type: decision
+Wait:
+    type: chance
+    Storm leaves:
+        p: 0.5
+        payoff: 30000
+    Storm hits:
+        p: 0.5
+        type: chance
+        Logan open:
+            p: 0.8
+            payoff: 30000
+        Logan closed:
+            p: 0.2
+            type: decision
+            MAF:
+                type: chance
+                High cost:
+                    p: 0.33333
+                    payoff: -27000
+                Low cost:
+                    p: 0.66667
+                    payoff: -9000
+            Cancel at 5:
+                payoff: -35250
+Truck:
+    type: chance
+    High cost:
+        p: 0.5
+        payoff: 18000
+    Medium cost:
+        p: 0.25
+        payoff: 21000
+    Low cost:
+        p: 0.25
+        payoff: 24000
+Cancel now:
+    payoff: -34500
